@@ -1,0 +1,24 @@
+{__NOLAYOUT__}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正在跳转</title>
+    <link rel="stylesheet" href="__PUBLIC__/static/plug/layui-admin/dist/layuiadmin/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="__PUBLIC__/static/plug/layui-admin/dist/layuiadmin/style/admin.css" media="all">
+</head>
+<body>
+<div class="layui-fluid"></div>
+</body>
+<script src="__PUBLIC__/static/plug/layui-admin/dist/layuiadmin/layui/layui.all.js"></script>
+<script>
+    layer.msg('<?php echo(strip_tags($msg));?>', {
+        offset: '15px'
+        ,icon: 1
+        ,time: '<?php echo($wait*1000);?>'
+    }, function(){
+        location.href = "<?php echo($url);?>"
+        return;
+    });
+</script>
+</html>
